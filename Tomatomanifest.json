@@ -1,0 +1,66 @@
+{
+  "run": "B_pool_2026",
+  "crop": "tomato",
+  "cls_out": [
+    "earlyblight",
+    "bacterialspot",
+    "healthy",
+    "lateblight",
+    "yellowleafcurlvirus"
+  ],
+  "seg_channels": [
+    "earlyblight",
+    "bacterialspot",
+    "background",
+    "lateblight",
+    "yellowleafcurlvirus"
+  ],
+  "sources": [
+    "Training",
+    "Test"
+  ],
+  "dedup_thr": 8,
+  "seed": 42,
+  "img_size": 256,
+  "batch": 8,
+  "max_epochs": 30,
+  "lr": 1e-05,
+  "patience": 5,
+  "tau": 0.6,
+  "preproc": "mobilenet",
+  "clahe": false,
+  "loss": {
+    "alpha_FP": 0.3,
+    "beta_FN": 0.7,
+    "gamma": 1.33
+  },
+  "split": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "pool_n": 542,
+  "removed_dedup": [
+    "tomato_early_blight_29.jpg",
+    "tomato_early_blight_47.jpg",
+    "tomato_early_blight_136.jpg",
+    "tomato_early_blight_159.jpg",
+    "tomato_early_blight_173.jpg",
+    "tomato_early_blight_202.jpg",
+    "tomato_early_blight_google_0059.jpg",
+    "tomato_early_blight_google_0209.jpg",
+    "tomato_early_blight_google_0291.jpg",
+    "tomato_late_blight_google_0221.jpg"
+  ],
+  "train_n": 379,
+  "valid_n": 81,
+  "test_n": 82,
+  "sha256_metadata": "217642d2bce2b481320ea46388c46bd468dd3ad8f7b440c96e80a4677d80b31d",
+  "sha256_model_A": "97d1d770536a8c1445f6f32125148cb869c070d14ec1bd2a20fde273c62f7b66",
+  "sha256_model_B": "2654e596ed35f7d69114726b99faf9be15b4e8cb6a4bc26aaeb8b3a0a43caf4a",
+  "versions": {
+    "tensorflow": "2.16.1",
+    "numpy": "1.26.4",
+    "opencv": "4.10.0"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "run": "B_pool_2026",
+  "crop": "bellpepper",
+  "config_source": "valores por defecto (verificar)",
+  "arch_A": "deeplab_mobilenet",
+  "cls_out": [
+    "bacterialspot",
+    "healthy"
+  ],
+  "seg_channels": [
+    "background",
+    "healthy",
+    "bacterialspot"
+  ],
+  "preproc": "mobilenet",
+  "clahe": false,
+  "sources": [
+    "Training",
+    "Test"
+  ],
+  "dedup_thr": 8,
+  "seed": 42,
+  "img_size": 256,
+  "batch": 8,
+  "max_epochs": 30,
+  "lr": 1e-05,
+  "patience": 5,
+  "tau": 0.6,
+  "loss": {
+    "alpha_FP": 0.3,
+    "beta_FN": 0.7,
+    "gamma": 1.33
+  },
+  "split": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "pool_n": 63,
+  "removed_dedup": [
+    "bell_pepper_bacterial_spot_Bing_0068.jpg",
+    "bell_pepper_bacterial_spot_Bing_0112.jpg",
+    "bell_pepper_bacterial_spot_Bing_0227.jpg",
+    "bell_pepper_bacterial_spot_Google_0000.jpg",
+    "bell_pepper_bacterial_spot_Google_0004.jpg",
+    "bell_pepper_bacterial_spot_Google_0008.jpg",
+    "bell_pepper_bacterial_spot_Google_0024.jpg",
+    "bell_pepper_bacterial_spot_Google_0029.jpg",
+    "bell_pepper_bacterial_spot_Google_0160.jpg",
+    "bell_pepper_bacterial_spot_Bing_0003.jpg",
+    "bell_pepper_bacterial_spot_Bing_0019.jpg",
+    "bell_pepper_bacterial_spot_Bing_0036.jpg",
+    "bell_pepper_bacterial_spot_Bing_0164.jpg"
+  ],
+  "train_n": 44,
+  "valid_n": 9,
+  "test_n": 10,
+  "sha256_metadata": "217642d2bce2b481320ea46388c46bd468dd3ad8f7b440c96e80a4677d80b31d",
+  "sha256_model_A": "6d406fdca182dc329c8b68ab2dc687eddb1ed62eea01e84a7be1b071380a983b",
+  "sha256_model_B": "46793e979dc3c0d6f9cb432f4f51b39a802eb230471679b614cca9b77c2dd232",
+  "versions": {
+    "tensorflow": "2.16.1",
+    "numpy": "1.26.4",
+    "opencv": "4.10.0"
+  }
+}

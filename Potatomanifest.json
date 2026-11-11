@@ -1,0 +1,71 @@
+{
+  "run": "B_pool_2026",
+  "crop": "potato",
+  "config_source": "valores por defecto (verificar)",
+  "arch_A": "unet_mobilenet",
+  "cls_out": [
+    "other",
+    "earlyblight",
+    "healthy",
+    "lateblight"
+  ],
+  "seg_channels": [
+    "background",
+    "healthy",
+    "earlyblight",
+    "lateblight"
+  ],
+  "preproc": "mobilenet",
+  "clahe": false,
+  "sources": [
+    "Training",
+    "Test"
+  ],
+  "dedup_thr": 8,
+  "seed": 42,
+  "img_size": 256,
+  "batch": 8,
+  "max_epochs": 30,
+  "lr": 1e-05,
+  "patience": 5,
+  "tau": 0.6,
+  "loss": {
+    "alpha_FP": 0.3,
+    "beta_FN": 0.7,
+    "gamma": 1.33
+  },
+  "split": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "pool_n": 228,
+  "removed_dedup": [
+    "potato_early_blight_23.jpg",
+    "potato_early_blight_31.jpg",
+    "potato_early_blight_56.jpg",
+    "potato_early_blight_google_0001.jpg",
+    "potato_early_blight_google_0143.jpg",
+    "potato_early_blight_google_0352.jpg",
+    "potato_late_blight_10.jpg",
+    "potato_late_blight_google_0002.jpg",
+    "potato_late_blight_google_0035.jpg",
+    "potato_late_blight_google_0054.jpg",
+    "potato_early_blight_google_0004.jpg",
+    "potato_early_blight_google_0018.jpg",
+    "potato_early_blight_google_0076.jpg",
+    "potato_early_blight_google_0194.jpg",
+    "potato_late_blight_google_0048.jpg"
+  ],
+  "train_n": 159,
+  "valid_n": 34,
+  "test_n": 35,
+  "sha256_metadata": "217642d2bce2b481320ea46388c46bd468dd3ad8f7b440c96e80a4677d80b31d",
+  "sha256_model_A": "448ff90fe984599b0573bd30b01f18c678f25e71081897e94a00ca5d64c94085",
+  "sha256_model_B": "778fc48f5c35ff35007705cd25f6f590f4484db8e9d990b6fd65d0198f8eb0af",
+  "versions": {
+    "tensorflow": "2.16.1",
+    "numpy": "1.26.4",
+    "opencv": "4.10.0"
+  }
+}
